@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Consultancy Website</title>
+  <style>
+    /* Your CSS styles for the page go here */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+    }
+
+    header {
+      background-color: #2a6e85;
+      padding: 10px 20px; /* Reduced header height */
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    header h1 {
+      color: #fff;
+      margin: 0;
+    }
+
+    .dashboard {
+      display: flex;
+      justify-content: center;
+      margin-top: 40px;
+    }
+
+    .dashboard a {
+      background-color: #1c4b5c;
+      color: #fff;
+      text-align: center;
+      padding: 15px 30px;
+      margin: 0 10px;
+      border-radius: 10px;
+      text-decoration: none;
+      font-size: 18px;
+      cursor: pointer;
+      transition: transform 0.2s;
+    }
+
+    .dashboard a:hover {
+      transform: scale(1.05);
+    }
+
+    .login-signup-btn {
+      background-color: #ffa500;
+      color: #fff;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    .profile-card {
+      width: 40px;
+      height: 40px;
+      background-color: #ffa500;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-right: 5px;
+      display: none; /* Initially hide the circular card */
+    }
+
+    .search-bar {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 20px 0; /* Equal distance from top and bottom of the header */
+    }
+
+    .search-input {
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 20px;
+      font-size: 16px;
+      width: 320px;
+      height: 25px; 
+      background-image: url("images/search.jpg");
+      background-repeat: no-repeat;
+      background-size: 20px;
+      background-position: 10px center;
+      padding-left: 40px;
+    }
+
+    /* Additional Consultancy Design */
+    .consultancy-section {
+      padding: 40px;
+      background-color: #ffffff;
+      text-align: center;
+    }
+
+    .consultancy-heading {
+      font-size: 36px;
+      color: #2a6e85;
+      margin-bottom: 20px;
+    }
+
+    .consultancy-description {
+      font-size: 18px;
+      color: #555;
+      margin-bottom: 40px;
+    }
+
+    .startup-image {
+      max-width: 100%;
+      border-radius: 10px;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+      margin-bottom: 20px;
+    }
+
+    .cta-button {
+      background-color: #1c4b5c;
+      color: #fff;
+      padding: 12px 30px;
+      border: none;
+      border-radius: 5px;
+      font-size: 20px;
+      cursor: pointer;
+      text-decoration: none;
+    }
+
+    .cta-button:hover {
+      background-color: #2a6e85;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Consultancy Website</h1>
+    <a href="login and signup/login.html"><button class="login-signup-btn" id="loginSignupBtn">Login / Signup</button></a>
+    <div class="profile-card" id="profileCard">
+      <!-- Add the profile picture or default logo here -->
+      <img src="images/default_logo.jpg" alt="Profile Picture">
+    </div>
+  </header>
+  <div class="search-bar">
+    <input type="text" class="search-input" placeholder="HOW MAY I HELP YOU?">
+  </div>
+  <div class="dashboard">
+    <a href="dashboard/Account.html">ACCOUNT</a>
+    <a href="dashboard/finlearn.html">FIN-LEARNING</a>
+    <a href="dashboard/Consultancy.html">CONSULTANCY</a>
+    <a href="dashboard/calculators.html">CALCULATORS</a>
+    <a href="dashboard/invoice.html">INVOICE-GENERATOR</a>
+  </div>
+
+  <br>
+  <br>
+  <!-- Consultancy Section -->
+  <section class="consultancy-section">
+    <h2 class="consultancy-heading">We Help You Build Your Startup</h2>
+    <p class="consultancy-description">At Consultancy Website, we provide various types of consultancies to help you succeed in your startup venture. Our expert consultants will guide you with valuable business insights and strategies.</p>
+    <img class="startup-image" src="Startup.jpg" alt="Startup Image">
+    <br>
+    <a href="#" class="cta-button">Learn More</a>
+  </section>
+
+  <script>
+    const profileCard = document.getElementById('profileCard');
+    const loginSignupBtn = document.getElementById('loginSignupBtn');
+
+    // Sample event for demonstration purposes
+    loginSignupBtn.addEventListener('click', () => {
+      // Replace the button with the profile card on login/signup
+      loginSignupBtn.style.display = 'none';
+      profileCard.style.display = 'block';
+
+      // For demonstration, set a default profile picture when logged in
+      profileCard.innerHTML = '<img src="images/sample_profile.jpg" alt="Profile Picture">';
+    });
+  </script>
+</body>
+</html>
